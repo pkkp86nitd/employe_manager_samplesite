@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+     <meta charset="UTF-8">
+    <title>Employee Portal</title>
+</head>
+<body>
+<div class="container">
+{% csrf_token %}
+ <h1 class="h2 Bootstrap heading (2rem = 32px) text-primary">Employee Portal </h1>
+      <div class="jumbotron">
+
+        <h1 class="text-muted h6 heading secondary text">Enter the Employee details below:</h1><br>
+        <form method="POST">
+            <table>
+
+                {{ form }}
+            </table>
+            <br>
+          <button type="submit" class="save btn btn-primary" style="margin-left:150px;">SAVE</button>
+        </form>
+
+      </div>
+</div>
+</body>
+</html>
